@@ -1,0 +1,66 @@
+header{
+  h2 {
+    height:50px;
+    background-color: lightgray;
+    color:white;
+  }
+}
+
+@mixin alignStart {
+  align-self: flex-start;
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  header{
+    @include alignStart();
+    width: 100%;
+    h2{
+      padding-left: 10px;
+    }
+  }
+  thead tr{
+    background-color: lightgray;
+    border:1px solid black;
+    th{
+      font-weight: 500;
+      border:none;
+      border-bottom: 1px solid black;
+    }
+  }
+  button{
+    border:1px solid black;
+  }
+
+  .createActionContainer{
+    @include alignStart();
+    padding:5px;
+    border-radius: 15px;
+    display: inline;
+
+    &:hover,&:active,&:focus{
+      background-color: lightgray;
+    }
+
+    .createTaskAction{
+      margin-bottom: 10px;
+    }
+    .createTaskAction,.createTaskAction:hover,.createTaskAction:active,.createTaskAction:focus{
+      background-color: transparent!important;
+      border: none!important;
+      outline: none;
+      box-shadow: none!important;
+    }
+    svg{
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.todoComponentContainer{
+  width: 80%;
+}

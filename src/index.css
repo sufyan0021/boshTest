@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.actionButton{
+  background-color: lightgray!important;
+  border-radius: 15px!important;
+}
+
+label:before{
+  content:"*"
+}
+
+input,select,textarea{
+  width:100%;
+}
